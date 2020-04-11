@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import ReactDOM from 'react-dom';
 
 /* eslint-disable */
@@ -35,7 +36,7 @@ class Modal extends Component {
 
   render() {
     return ReactDOM.createPortal(
-      <div className="modal-dialog">{this.props.children}</div>,
+      <ModalWindow className="modal-dialog">{this.props.children}</ModalWindow>,
       this.node,
     );
   }
@@ -43,3 +44,7 @@ class Modal extends Component {
 
 
 export default Modal;
+
+const ModalWindow = styled.div`
+  z-index: 100000000000;
+`

@@ -1,16 +1,18 @@
 import React from 'react';
+import styled from 'styled-components';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ListHeader from './ListHeader';
 import MainList from './MainList';
 
 const Dictionary = ({ data }) => (
-  <div className="container">
-    <ListHeader size={data.map.size} />
-    <MainList
-      data={data.map}
-    />
-  </div>
+  <Container>
+    <Sticky>
+      <ListHeader size={data.map.size} />
+    </Sticky>
+
+    <MainList data={data.map} />
+  </Container>
 );
 
 Dictionary.propTypes = {
@@ -19,6 +21,19 @@ Dictionary.propTypes = {
   }).isRequired,
 };
 
-export default connect(state => ({
-  data: state.dictionary.filtred,
-}), null)(Dictionary);
+export default connect(
+  (state) => ({
+    data: state.dictionary.filtred,
+  }),
+  null,
+)(Dictionary);
+
+const Container = styled.div`
+  position: relative;
+`;
+
+const Sticky = styled.div`
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+`;

@@ -42,6 +42,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.2.0",
     "style-loader": "0.19.0",
+    "styled-components": "^5.1.0",
     "sw-precache-webpack-plugin": "0.11.4",
     "url-loader": "0.6.2",
     "webpack": "3.8.1",
@@ -108,11 +109,11 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.6.1",
-    "react-scripts": "1.0.11",
     "jest": "21.2.1",
     "jest-environment-jsdom-debug": "1.0.1",
     "jest-enzyme": "4.0.1",
     "node-sass": "^4.7.2",
+    "react-scripts": "1.0.11",
     "react-test-renderer": "^16.2.0",
     "sass-loader": "^6.0.6"
   }
